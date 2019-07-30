@@ -15,7 +15,7 @@ public class Model {
     @ColumnInfo(name = "id")
     private int id;
 
-    String message;
+    private String message;
 
     public Model(String message) {
         this.message = message;

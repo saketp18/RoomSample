@@ -7,6 +7,8 @@ import androidx.room.Query;
 
 import java.util.List;
 
+import io.reactivex.Observable;
+
 /**
  * Created by Saket on 27,July,2019
  */
@@ -22,7 +24,7 @@ public interface ModelDAO {
     void insert(Model model);
 
     @Query("SELECT * FROM Model")
-    public LiveData<List<Model>> getModel();
+    public Observable<List<Model>> getModel();
 
     @Query("SELECT * FROM MessageDB WHERE messageId = :id")
     public LiveData<List<MessageDB>> getMessage(int id);

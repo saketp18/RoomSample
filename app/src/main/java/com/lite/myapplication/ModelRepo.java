@@ -8,6 +8,8 @@ import androidx.room.Room;
 
 import java.util.List;
 
+import io.reactivex.Observable;
+
 /**
  * Created by Saket on 27,July,2019
  */
@@ -35,7 +37,7 @@ public class ModelRepo {
         }
     }
 
-    public LiveData<List<Model>> getModel(){
+    public Observable<List<Model>> getModel(){
         return modelDataBase.doDaoModelAccess().getModel();
     }
 }
